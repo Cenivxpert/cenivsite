@@ -7,7 +7,7 @@ import SocialLinks from './SocialLinks';
 export default function Header() {
   return (
     <header className="bg-gray-900 shadow">
-      <div className="w-full px-4 py-20">
+      <div className="w-full px-4 py-20"> /* Augmentation du padding vertical pour plus d'espace */
 
         {/* Bannière animée responsive */}
         <motion.div
