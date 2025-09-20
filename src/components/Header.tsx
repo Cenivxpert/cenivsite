@@ -7,16 +7,7 @@ import SocialLinks from './SocialLinks';
 export default function Header() {
   return (
     <header className="bg-gray-900 shadow">
-      <div className="w-full px-4 py-6">
-        {/* Logo */}
-        <motion.div
-          className="text-3xl font-bold text-ceniv mb-4 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <a href="/">CENIV</a>
-        </motion.div>
+      <div className="w-full px-4 py-20">
 
         {/* Bannière animée responsive */}
         <motion.div
