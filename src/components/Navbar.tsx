@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 shadow absolute top-0 left-0 w-full z-50 h-16 flex items-center pt-6">
+    <nav className="bg-gray-900 shadow absolute top-0 left-0 w-full z-50 h-16 flex items-center pt-6 pb-6">
       <div className="container mx-auto flex justify-between items-center px-4 relative">
         {/* Logo + Brand avec Motion */}
         <motion.div
@@ -19,7 +19,7 @@ export default function Navbar() {
             <img
               src="/public/assets/logo/Ceniv-removebg-white.png"
               alt="CENIV"
-              className="h-32 w-32 rounded-full object-contain"
+              className="h-24 w-24 rounded-full object-contain"
             />
           </Link>
         </motion.div>
@@ -48,7 +48,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Link to="/branches" className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all">
+            <Link to="/Branch" className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all">
               Branches
             </Link>
           </motion.li>
@@ -57,8 +57,8 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Link to="/contact" className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all">
-              Contact
+            <Link to="/press" className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all">
+              PressKit
             </Link>
           </motion.li>
         </ul>
@@ -69,7 +69,7 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <Link to="/contact" className="btn btn-primary bg-[#5c72fd] text-white px-5 py-2 rounded hover:bg-[#ba4b0bce] transition-colors">
+          <Link to="/contact" className="btn btn-primary bg-[#5c72fd] text-white px-5 py-2 rounded-full hover:bg-[#ba4b0bce] transition-colors">
             Nous Joindre
           </Link>
         </motion.div>
