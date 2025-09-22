@@ -108,7 +108,7 @@ export default function Header() {
                 {slides.map((slide, idx) => (
                   <div
                     key={idx}
-                    className="min-w-full flex items-center px-5 py-4 bg-[#232700] rounded-2xl border-2 border-[#586102] hover:border-[#e1760a] transition-colors duration-300 cursor-pointer"
+                    className="min-w-full flex items-center px-5 py-4 bg-[#23270094] rounded-2xl border-2 border-[#586102] hover:border-[#e1760a] transition-colors duration-300 cursor-pointer"
                     style={{ boxSizing: "border-box" }}
                   >
                     {/* Image à gauche */}
@@ -157,7 +157,7 @@ export default function Header() {
         </motion.p>
         <motion.a
           href="#"
-          className="inline-block bg-[#D4A373] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#b8864b] transition mb-2"
+          className="inline-block bg-[#0f2adb84] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition mb-2"
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}

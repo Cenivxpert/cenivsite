@@ -69,7 +69,7 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <Link to="/contact" className="btn btn-primary bg-[#5c72fd] text-white px-5 py-2 rounded-full hover:bg-[#ba4b0bce] transition-colors">
+          <Link to="/contact" className="btn btn-primary bg-[#2f45d7e2] text-white px-5 py-2 rounded-full hover:bg-[#ba4b0bce] transition-colors">
             Nous Joindre
           </Link>
         </motion.div>
