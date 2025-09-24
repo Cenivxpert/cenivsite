@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 shadow absolute top-0 left-0 w-full z-50 h-16 flex items-center pt-6 pb-4">
+    <nav className="bg-gray-900 shadow absolute top-0 left-0 w-full z-50 flex items-center">
       <div className="container mx-auto flex justify-between items-center px-4 relative">
         {/* Logo + Brand avec Motion */}
         <motion.div
