@@ -17,9 +17,9 @@ export default function Navbar() {
         >
           <Link to="/" className="relative">
             <img
-              src="/public/assets/logo/Ceniv-removebg-white.png"
+              src="https://r.mobirisesite.com/1844272/assets/images/g17b7c588e6d78ba3a14d5d145ee3-h_mfzwfjv3.jpg"
               alt="CENIV"
-              className="h-12 w-12 rounded-full object-contain"
+              className="h-16 w-16 rounded-full object-contain"
             />
           </Link>
         </motion.div>
