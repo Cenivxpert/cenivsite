@@ -70,11 +70,15 @@ export default function Header() {
         <Navbar />
       </div>
 
-      {/* Background image + overlay olive + PARALLAX dynamique */}
+{/* Background image + overlay olive + PARALLAX dynamique */}
       <div
-        className="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat"
+        className="
+          absolute inset-0 w-full h-full
+          bg-mobile-ceniv bg-contain
+          sm:bg-desktop-ceniv sm:bg-contain
+          bg-center bg-no-repeat
+        "
         style={{
-          backgroundImage: "url('/assets/image/bannière-overlay-cenivsite4.jpg')",
           backgroundPosition: `center ${bgPos}px`
         }}
       >
