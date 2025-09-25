@@ -9,19 +9,19 @@ import Autoplay from "embla-carousel-autoplay";
 // Slides du carousel
 const slides = [
   {
-    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1546542755-81ef2fa60800.jpeg",
+    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1636304508054-daf943221-h_mg011u9d.jpg",
     title: "TV",
     text: "Vidéos qui captivent, histoires qui résonnent.",
     link: "#tv"
   },
   {
-    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1604092039917-7c153e632619.jpeg",
+    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1543349689-b481d0472a54.jpeg",
     title: "Design",
     text: "Esthétique audacieuse pour vos projets.",
     link: "#design"
   },
   {
-    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1694095748042-a659a51a1d52.jpeg",
+    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1706452031249-1520c2a78-h_mfpvqes9.jpg",
     title: "News",
     text: "L'information qui compte, livrée sans fard.",
     link: "#news"
