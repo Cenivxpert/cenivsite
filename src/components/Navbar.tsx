@@ -19,7 +19,7 @@ export default function Navbar() {
             <img
               src="/public/assets/logo/Ceniv-removebg-white.png"
               alt="CENIV"
-              className="h-16 w-16 rounded-full object-contain"
+              className="h-12 w-12 rounded-full object-contain"
             />
           </Link>
         </motion.div>
