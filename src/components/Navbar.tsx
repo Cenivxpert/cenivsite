@@ -6,8 +6,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 shadow absolute top-0 left-0 w-full z-50 h-16 flex items-center pt-6 pb-6">
-      <div className="container mx-auto flex justify-between items-center px-4 relative">
+    <nav className="bg-gray-900 shadow fixed top-0 left-0 w-full z-50 h-16 flex items-center">
+      <div className="container mx-auto flex justify-between items-center px-4 relative h-16">
         {/* Logo + Brand avec Motion */}
         <motion.div
           className="flex items-center"
@@ -19,7 +19,7 @@ export default function Navbar() {
             <img
               src="https://r.mobirisesite.com/1844272/assets/images/g17b7c588e6d78ba3a14d5d145ee3-h_mfzwfjv3.jpg"
               alt="CENIV"
-              className="h-16 w-16 rounded-full object-contain"
+              className="h-12 w-12 rounded-full object-contain"
             />
           </Link>
         </motion.div>
@@ -48,7 +48,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Link to="/Branch" className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all">
+            <Link to="/branch" className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all">
               Branches
             </Link>
           </motion.li>
@@ -73,78 +73,73 @@ export default function Navbar() {
             Nous Joindre
           </Link>
         </motion.div>
-        {/* Menu mobile */}
-<div className="md:hidden flex items-center">
-  <button
-    className="w-10 h-10 flex flex-col items-center justify-center rounded-full bg-[#1a202c] text-white space-y-1"
-    onClick={() => setIsOpen(!isOpen)}
-    aria-label="Ouvrir le menu"
-  >
-    {/* Hamburger icon */}
-    <span className="block w-6 h-0.5 bg-white"></span>
-    <span className="block w-6 h-0.5 bg-white"></span>
-    <span className="block w-6 h-0.5 bg-white"></span>
-  </button>
-</div>
-</div>
+        {/* Bouton Hamburger mobile */}
+        <div className="md:hidden flex items-center">
+          <button
+            className="w-10 h-10 flex flex-col items-center justify-center rounded-full bg-[#1a202c] text-white space-y-1"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isOpen}
+          >
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+          </button>
+        </div>
+      </div>
 
-{/* Menu mobile drawer */}
-{isOpen && (
-  <motion.div
-    initial={{ x: '100%', opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x: '100%', opacity: 0 }}
-    transition={{ duration: 0.3 }}
-    className="fixed top-0 right-0 w-64 h-screen bg-[#1a202c] shadow-lg flex flex-col py-6 px-8 md:hidden z-50"
-  >
-    <button
-      className="self-end mb-8 text-white text-2xl"
-      onClick={() => setIsOpen(false)}
-      aria-label="Fermer le menu"
-    >
-      &times;
-    </button>
-
-    <Link 
-      to="/" 
-      className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
-      onClick={() => setIsOpen(false)}
-    >
-      Accueil
-    </Link>
-
-    <Link 
-      to="/about" 
-      className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
-      onClick={() => setIsOpen(false)}
-    >
-      À Propos
-    </Link>
-
-    <Link 
-      to="/branches" 
-      className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
-      onClick={() => setIsOpen(false)}
-    >
-      Branches
-    </Link>
-
-    <Link 
-      to="/contact" 
-      className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
-      onClick={() => setIsOpen(false)}
-    >
-      Contact
-    </Link>
-
-    <Link 
-      to="/contact" 
-      className="mt-6 btn btn-primary bg-[#5c72fd] text-white px-5 py-2 rounded hover:bg-[#ba4b0bce] transition-colors" 
-      onClick={() => setIsOpen(false)}
-    >
-      Nous Joindre
-    </Link>
-  </motion.div>
+      {/* Menu mobile drawer */}
+      {isOpen && (
+        <motion.div
+          initial={{ x: '100%', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: '100%', opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed top-0 right-0 w-64 max-w-full h-screen bg-[#1a202c] shadow-lg flex flex-col py-6 px-8 md:hidden z-50"
+        >
+          <button
+            className="self-end mb-8 text-white text-2xl"
+            onClick={() => setIsOpen(false)}
+            aria-label="Fermer le menu"
+          >
+            &times;
+          </button>
+          <Link 
+            to="/" 
+            className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
+            onClick={() => setIsOpen(false)}
+          >
+            Accueil
+          </Link>
+          <Link 
+            to="/about" 
+            className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
+            onClick={() => setIsOpen(false)}
+          >
+            À Propos
+          </Link>
+          <Link 
+            to="/branch" 
+            className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
+            onClick={() => setIsOpen(false)}
+          >
+            Branches
+          </Link>
+          <Link 
+            to="/press" 
+            className="text-white px-4 py-2 rounded hover:bg-[#ba4b0bce] hover:underline decoration-black decoration-2 underline-offset-[6px] transition-all" 
+            onClick={() => setIsOpen(false)}
+          >
+            PressKit
+          </Link>
+          <Link 
+            to="/contact" 
+            className="mt-6 btn btn-primary bg-[#5c72fd] text-white px-5 py-2 rounded hover:bg-[#ba4b0bce] transition-colors" 
+            onClick={() => setIsOpen(false)}
+          >
+            Nous Joindre
+          </Link>
+        </motion.div>
       )}
     </nav>
   );
