@@ -9,6 +9,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Section1 from "./section_head/Section1";
 import Section2 from "./section_head/Section2";
 import Section3 from "./section_head/Section3";
+import Section4 from "./section_head/Section4";
 
 // Slides du carousel
 const slides = [
@@ -179,6 +180,7 @@ export default function Header() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
     </header>
   );
 }

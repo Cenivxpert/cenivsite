@@ -12,6 +12,7 @@ import Header from './components/Header'
 import Section1 from './components/section_head/Section1'
 import Section2 from './components/section_head/Section2'
 import Section3 from './components/section_head/Section3'
+import Section4 from './components/section_head/Section4'
 
 import Footer from './components/Footer';
 // Supprimez complètement cette ligne
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/section1" element={<Section1 />} />
           <Route path="/section2" element={<Section2 />} />
           <Route path="/section3" element={<Section3 />} />
+          <Route path="/section4" element={<Section4 />} />
            {/* Ajout de la route */}
         </Routes>
         
