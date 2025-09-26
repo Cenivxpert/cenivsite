@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+
 import Section1 from "./section_head/Section1";
+import Section2 from "./section_head/Section2";
 
 // Slides du carousel
 const slides = [
@@ -174,6 +176,7 @@ export default function Header() {
       </div>
 
       <Section1 />
+      <Section2 />
     </header>
   );
 }

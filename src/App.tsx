@@ -10,6 +10,8 @@ import PhotosGallery from './pages/PhotosGallery'
 
 import Header from './components/Header'
 import Section1 from './components/section_head/Section1'
+import Section2 from './components/section_head/Section2'
+
 import Footer from './components/Footer';
 
 export default function App() {
@@ -28,6 +30,7 @@ export default function App() {
           <Route path="/branch" element={<Branch />} />
 
           <Route path="/section1" element={<Section1 />} />
+          <Route path="/section2" element={<Section2 />} />
            {/* Ajout de la route */}
         </Routes>
         
