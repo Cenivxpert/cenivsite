@@ -9,6 +9,7 @@ import Branch from './pages/Branch'
 import PhotosGallery from './pages/PhotosGallery'
 
 import Header from './components/Header'
+import Section1 from './components/section_head/Section1'
 import Footer from './components/Footer';
 
 export default function App() {
@@ -25,6 +26,8 @@ export default function App() {
           <Route path="/press" element={<PressKit />} />
           <Route path="/photos-gallery" element={<PhotosGallery />} />
           <Route path="/branch" element={<Branch />} />
+
+          <Route path="/section1" element={<Section1 />} />
            {/* Ajout de la route */}
         </Routes>
         
