@@ -1,3 +1,5 @@
+// src/components/section_head/Section2.tsx
+
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -31,7 +33,7 @@ export default function Section2() {
           zIndex: 0,
         }}
       />
-      <div className="absolute inset-0 bg-[#001822] opacity-80 z-10"></div>
+      <div className="absolute inset-0 bg-[#001822] opacity-70 z-10"></div>
 
       {/* Contenu principal */}
       <div className="relative z-20 w-full flex flex-col items-center justify-center px-4 text-center">

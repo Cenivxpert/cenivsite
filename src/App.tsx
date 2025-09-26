@@ -11,8 +11,11 @@ import PhotosGallery from './pages/PhotosGallery'
 import Header from './components/Header'
 import Section1 from './components/section_head/Section1'
 import Section2 from './components/section_head/Section2'
+import Section3 from './components/section_head/Section3'
 
 import Footer from './components/Footer';
+// Supprimez complètement cette ligne
+// import { i } from 'framer-motion/client'
 
 export default function App() {
   return (
@@ -31,6 +34,7 @@ export default function App() {
 
           <Route path="/section1" element={<Section1 />} />
           <Route path="/section2" element={<Section2 />} />
+          <Route path="/section3" element={<Section3 />} />
            {/* Ajout de la route */}
         </Routes>
         
