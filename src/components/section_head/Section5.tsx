@@ -1,3 +1,5 @@
+// src/components/section_head/Section5.tsx
+
 import { useEffect, useState } from "react";
 
 export default function Section5() {

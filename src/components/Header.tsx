@@ -11,6 +11,7 @@ import Section2 from "./section_head/Section2";
 import Section3 from "./section_head/Section3";
 import Section4 from "./section_head/Section4";
 import Section5 from "./section_head/Section5";
+import Section6 from "./section_head/Section6";
 
 // Slides du carousel
 const slides = [
@@ -171,7 +172,7 @@ export default function Header() {
         </motion.p>
         <motion.a
           href="#"
-          className="inline-block bg-[#0f2adb84] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition mb-16"
+          className="inline-block bg-[#1834ebb5] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition mb-16"
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -185,6 +186,7 @@ export default function Header() {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section6 />
     </header>
   );
 }
