@@ -33,7 +33,7 @@ export default function Section2() {
           zIndex: 0,
         }}
       />
-      <div className="absolute inset-0 bg-[#001822] opacity-70 z-10"></div>
+      <div className="absolute inset-0 bg-[#001822] opacity-60 z-10"></div>
 
       {/* Contenu principal */}
       <div className="relative z-20 w-full flex flex-col items-center justify-center px-4 text-center">
@@ -67,7 +67,7 @@ export default function Section2() {
           avec passion et intégrité.
         </motion.p>
 
-        <div className="mbr-section-btn text-center mt-12">
+        <div className="mbr-section-btn text-center mt-12 mb-16">
           <a
             className="btn btn-primary bg-[#D4A373] text-[#1D2200] px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition"
             href="#"

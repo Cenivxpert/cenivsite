@@ -15,10 +15,10 @@ const icons = [
                 />
                 <div className="absolute bottom-[-40px] flex gap-2">
                     <a href="https://www.youtube.com/@CENIV-Diaspora" target="_blank" rel="noopener noreferrer">
-                        <img src="/public/assets/ico/youtube1.png" alt="YouTube" className="w-8 h-8 hover:opacity-80 transition-opacity" />
+                        <img src="/assets/ico/youtube1.png" alt="YouTube" className="w-8 h-8 hover:opacity-80 transition-opacity" />
                     </a>
                     <a href="http://www.tiktok.com/@cenivdiaspora" target="_blank" rel="noopener noreferrer">
-                        <img src="/public/assets/ico/tiktok2.png" alt="TikTok" className="w-8 h-8 hover:opacity-80 transition-opacity" />
+                        <img src="/assets/ico/tiktok2.png" alt="TikTok" className="w-8 h-8 hover:opacity-80 transition-opacity" />
                     </a>
                 </div>
             </div>
@@ -36,7 +36,7 @@ const icons = [
                 />
                 <div className="absolute bottom-[-40px] flex gap-2">
                     <a href="https://www.facebook.com/CenivAlbetaDesign/" target="_blank" rel="noopener noreferrer">
-                    <img src="/public/assets/ico/facebook1.png" alt="Facebook" className="w-8 h-8 hover:opacity-80 transition-opacity" />
+                    <img src="/assets/ico/facebook1.png" alt="Facebook" className="w-8 h-8 hover:opacity-80 transition-opacity" />
                     </a>
                 </div>
             </div>
@@ -54,7 +54,7 @@ const icons = [
                 />
                 <div className="absolute bottom-[-40px] flex gap-2">
                     <a href="https://www.facebook.com/cenivnews" target="_blank" rel="noopener noreferrer">
-                    <img src="/public/assets/ico/facebook1.png" alt="Facebook" className="w-8 h-8 hover:opacity-80 transition-opacity" />
+                    <img src="/assets/ico/facebook1.png" alt="Facebook" className="w-8 h-8 hover:opacity-80 transition-opacity" />
                     </a>
                 </div>
             </div>

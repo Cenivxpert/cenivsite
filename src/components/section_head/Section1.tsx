@@ -28,7 +28,7 @@ const cards = [
 
 export default function HeaderNews() {
   return (
-    <section className="relative w-full py-20 bg-[#001822]">
+    <section className="relative w-full py-16 bg-[#001822]">
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#001822] opacity-80 pointer-events-none"></div>
       <div className="relative container mx-auto px-4">
@@ -42,7 +42,7 @@ export default function HeaderNews() {
           Dernières Nouvelles
         </motion.h2>
         {/* Cards */}
-        <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-8 items-center justify-center mb-20">
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
@@ -74,8 +74,8 @@ export default function HeaderNews() {
         {/* Button */}
         <div className="mt-12 text-center">
           <a
-            className="btn btn-primary bg-[#D4A373] text-[#1D2200] px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition"
-            href="https://mobiri.se"
+            className="btn btn-primary bg-[#D4A373] text-[#1D2200] px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition mb-16"
+            href="#"
           >
             Toutes les News
           </a>
