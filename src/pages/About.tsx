@@ -26,24 +26,24 @@ const jsonLd = {
 
 const tabs = [
   {
-    label: "Visual Designer",
+    label: "Product Designer",
     name: "Christian Azane",
     role: "Visual Identity Designer",
-    img: "/press/photos-video-hd/about-us/visual_designer.jpg",
+    img: "/press/photos-video-hd/about-us/product_designer2.jpg",
     text: "Chris crée des systèmes visuels audacieux et mémorables — des logos aux modèles sociaux — qui aident les marques personnelles à se démarquer avec style et cohérence sur toutes les plateformes. Création et maintenance sites web. Assure une qualité constante."
   },
   {
     label: "Brand Strategist",
     name: "Prince Nalimo",
     role: "Brand Strategist",
-    img: "/press/photos-video-hd/about-us/brand_strategist.jpg",
+    img: "/press/photos-video-hd/about-us/brand_strategist2.jpg",
     text: "Prince gère les marchés/opportunités CENIV et suit les partenariats. Aide les entrepreneurs et les créatifs à révéler leur histoire unique et à la positionner pour un impact maximal. Fort d'une expérience en storytelling et en marketing, il transforme leur vision personnelle en messages percutants."
   },
   {
     label: "Reporter terrain",
     name: "Diakité Mamadou",
     role: "Reporter terrain",
-    img: "/press/photos-video-hd/about-us/reporter_terrain.jpeg",
+    img: "/press/photos-video-hd/about-us/reporter_terrain2.jpg",
     text: "Diakité réalise des interviews, micros-trottoirs et vidéos de motivation. Assure la présence de CENIV sur le terrain et le lien direct avec le public. Propose des sujets pertinents en accord avec la vision de CENIV et diffuse les contenus sur Tiktok et les autres canaux adaptés."
   }
 ];
