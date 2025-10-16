@@ -28,7 +28,7 @@ const tabs = [
   {
     label: "Product Designer",
     name: "Christian Azane",
-    role: "Visual Identity Designer",
+    role: "Product Identity Designer",
     img: "/press/photos-video-hd/about-us/product_designer2.jpg",
     text: "Chris crée des systèmes visuels audacieux et mémorables — des logos aux modèles sociaux — qui aident les marques personnelles à se démarquer avec style et cohérence sur toutes les plateformes. Création et maintenance sites web. Assure une qualité constante."
   },
