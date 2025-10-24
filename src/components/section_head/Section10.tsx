@@ -75,10 +75,18 @@ export default function Section10() {
       </div>
       {/* Responsive styles */}
       <style>{`
-        @media (max-width: 992px) {
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .image-wrap img { height: 280px !important; max-height: 280px !important; }
+          .item-wrapper { margin-bottom: 24px !important; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
           .image-wrap img { height: 220px !important; max-height: 220px !important; }
           .item-wrapper { margin-bottom: 28px !important; }
         }
+        
         .items-wrapper { margin-left: -32px; margin-right: -32px; }
         .item { padding-left: 32px; padding-right: 32px; }
       `}</style>

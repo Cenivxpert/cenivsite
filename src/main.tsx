@@ -4,10 +4,10 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import ErrorBoundary from './components/ErrorBoundary'
-// import { filterDevWarnings } from './utils/devWarnings'
+import { filterDevWarnings } from './utils/devWarnings'
 
-// Décommentez la ligne suivante si vous voulez filtrer les warnings
-// filterDevWarnings()
+// Activer le filtre de warnings pour éviter les erreurs DOM non-critiques
+filterDevWarnings()
 
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -200,7 +200,14 @@ export default function Section17() {
       </div>
       {/* Responsive styles */}
       <style>{`
-        @media (max-width: 992px) {
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .content-wrapper { border-radius: 32px !important; padding: 24px !important; }
+          .content-wrap { width: 100% !important; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
           .content-wrapper { border-radius: 24px !important; padding: 16px !important; }
           .content-wrap { width: 100% !important; }
         }

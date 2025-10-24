@@ -27,7 +27,7 @@ const cards = [
   },
 ];
 
-export default function HeaderNews() {
+export default function Section1() {
   return (
     <section className="relative w-full py-16">
       <div className="relative container mx-auto px-4">

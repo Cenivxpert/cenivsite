@@ -148,17 +148,20 @@ export default function Section14() {
           .text-wrap { padding: 0.875rem !important; }
         }
         
-        @media (max-width: 992px) {
-          .item-wrapper .mbr-iconfont { font-size: 70px !important; }
-          .item { margin-bottom: 28px !important; }
-          .title-wrapper { margin-bottom: 48px !important; }
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .item-wrapper .mbr-iconfont { font-size: 75px !important; }
+          .item { margin-bottom: 24px !important; }
+          .title-wrapper { margin-bottom: 40px !important; }
         }
         
-        /* Mobile */
+        /* Mobile spécifique */
         @media (max-width: 767px) {
           .item-wrapper { min-height: 350px !important; }
           .item-wrapper .icon-wrapper-main { height: 160px !important; }
           .item-wrapper .mbr-iconfont { font-size: 60px !important; }
+          .item { margin-bottom: 28px !important; }
+          .title-wrapper { margin-bottom: 48px !important; }
         }
       `}</style>
     </section>

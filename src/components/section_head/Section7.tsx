@@ -238,10 +238,19 @@ export default function Section7() {
       </div>
       {/* Responsive image height */}
       <style>{`
-        @media (max-width: 1200px) {
+        /* Desktop intermédiaire */
+        @media (max-width: 1200px) and (min-width: 993px) {
+          .embla__slide img { height: 400px !important; max-height: 400px !important; }
+          .embla__slide { min-width: 750px !important; max-width: 750px !important; }
+        }
+        
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
           .embla__slide img { height: 350px !important; max-height: 350px !important; }
           .embla__slide { min-width: 650px !important; max-width: 650px !important; }
         }
+        
+        /* Mobile spécifique */
         @media (max-width: 767px) {
           .embla__slide img { height: 250px !important; max-height: 250px !important; }
           .embla__slide { min-width: 100vw !important; max-width: 100vw !important; }

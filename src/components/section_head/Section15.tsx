@@ -108,8 +108,8 @@ export default function Section15() {
         .items-wrapper { margin-left: -32px; margin-right: -32px; }
         .card { padding-left: 32px; padding-right: 32px; }
         
-        /* Mobile et Tablette - même format */
-        @media (max-width: 1023px) {
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 1023px) {
           .title-wrapper { margin-bottom: 1.5rem !important; }
           .items-wrapper { gap: 1rem !important; }
           .card { margin-bottom: 1rem !important; }

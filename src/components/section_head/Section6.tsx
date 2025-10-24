@@ -53,11 +53,17 @@ export default function Section6() {
       </div>
       {/* Responsive image height */}
       <style>{`
-        @media (max-width: 992px) {
-          .image-wrapper img { height: 250px; max-height: 250px; }
-        }
         .content-wrapper { padding-left: 12%; padding-right: 12%; }
-        @media (max-width: 992px) {
+        
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .image-wrapper img { height: 400px; max-height: 400px; }
+          .content-wrapper { padding-left: 6%; padding-right: 6%; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
+          .image-wrapper img { height: 250px; max-height: 250px; }
           .content-wrapper { padding-left: 0; padding-right: 0; }
         }
       `}</style>

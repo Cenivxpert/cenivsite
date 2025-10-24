@@ -23,7 +23,7 @@ export default function Section5() {
         className="absolute inset-0 w-full h-full"
         style={{
           backgroundImage:
-            "url('https://r.mobirisesite.com/1844272/assets/images/photo-1674108015366-95f4dbf94d4c.jpeg",
+            "url('https://r.mobirisesite.com/1844272/assets/images/photo-1674108015366-95f4dbf94d4c.jpeg')",
           backgroundSize: "cover",
           // La position verticale varie doucement avec le scroll
           backgroundPosition: `center ${bgPos - 400}px`,

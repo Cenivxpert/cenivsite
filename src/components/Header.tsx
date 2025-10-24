@@ -49,38 +49,68 @@ const slides = [
 
 export default function Header() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true },
-    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+    { 
+      loop: true,
+      skipSnaps: false,
+      dragFree: false
+    },
+    [Autoplay({ 
+      delay: 4000, 
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+      playOnInit: true
+    })]
   );
-  // Ajout pour stocker l'index du slide affiché
+  
+  // États avec valeurs par défaut sécurisées
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [bgPos, setBgPos] = useState(0);
   const headerRef = useRef<HTMLElement>(null);
 
-  // --- EFFET PARALLAX DYNAMIQUE ---
-  const [bgPos, setBgPos] = useState(0);
+  // --- EFFET PARALLAX DYNAMIQUE AVEC CLEANUP SÉCURISÉ ---
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setBgPos(window.scrollY * 0.4); // 0.4 = vitesse parallax, ajuste si tu veux plus ou moins d'effet
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setBgPos(window.scrollY * 0.4);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
-  // --- FIN PARALLAX ---
 
+  // --- EMBLA CAROUSEL AVEC CLEANUP ROBUSTE ---
   useEffect(() => {
     if (!emblaApi) return;
-    const onSelect = () => setCurrentIndex(emblaApi.selectedScrollSnap());
-    emblaApi.on("select", onSelect);
-    onSelect();
-  }, [emblaApi]);
 
-  // Exemple d'utilisation de headerRef
-  useEffect(() => {
-    if (headerRef.current) {
-      // Manipuler l'élément DOM
-      console.log(headerRef.current.offsetHeight);
-    }
-  }, []);
+    const onSelect = () => {
+      try {
+        setCurrentIndex(emblaApi.selectedScrollSnap());
+      } catch (error) {
+        console.warn('Embla selection error:', error);
+      }
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect(); // Initial call
+    
+    // Cleanup robuste
+    return () => {
+      try {
+        emblaApi.off("select", onSelect);
+      } catch (error) {
+        console.warn('Embla cleanup error:', error);
+      }
+    };
+  }, [emblaApi]);
 
   return (
     <header ref={headerRef} className="w-full min-h-screen relative overflow-hidden ">
@@ -97,7 +127,8 @@ export default function Header() {
         className="
           absolute inset-0 w-full h-full
           bg-mobile-ceniv bg-contain
-          sm:bg-desktop-ceniv sm:bg-contain
+          tablet:bg-tablet-ceniv tablet:bg-contain
+          laptop:bg-desktop-ceniv laptop:bg-contain
           bg-center bg-no-repeat
         "
         style={{
@@ -135,7 +166,7 @@ export default function Header() {
               <div className="flex">
                 {slides.map((slide, idx) => (
                   <div
-                    key={idx}
+                    key={`slide-${slide.title}-${idx}`}
                     className="min-w-full flex items-center px-5 py-4 bg-[#23270094] rounded-2xl border-2 border-[#586102] hover:border-[#e1760a] transition-colors duration-300 cursor-pointer"
                     style={{ boxSizing: "border-box" }}
                   >
@@ -150,23 +181,28 @@ export default function Header() {
                       <h4 className="font-serif text-white text-base font-semibold mb-1">{slide.title}</h4>
                       <p className="font-serif text-white text-base">{slide.text}</p>
                     </div>
-                    {/* Flèche personnalisée en bas à droite, redirection dynamique */}
-                    {idx === currentIndex && (
-                      <div className="flex flex-col justify-end items-end h-full ml-6">
-                        <button
-                          onClick={() => window.location.assign(slide.link)}
-                          className="bg-transparent p-0 m-0 focus:outline-none"
-                          aria-label={`Voir plus sur ${slide.title}`}
-                        >
-                          <img
-                            src="/assets/ico/fleche-courbe.png"
-                            alt="Flèche"
-                            className="w-8 h-8"
-                            draggable={false}
-                          />
-                        </button>
-                      </div>
-                    )}
+                    {/* Flèche avec transition douce - toujours présente pour éviter les rerenders */}
+                    <div className={`flex flex-col justify-end items-end h-full ml-6 transition-opacity duration-300 ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}>
+                      <button
+                        onClick={() => {
+                          try {
+                            window.location.assign(slide.link);
+                          } catch (error) {
+                            console.warn('Navigation error:', error);
+                          }
+                        }}
+                        className="bg-transparent p-0 m-0 focus:outline-none"
+                        aria-label={`Voir plus sur ${slide.title}`}
+                        disabled={idx !== currentIndex}
+                      >
+                        <img
+                          src="/assets/ico/fleche-courbe.png"
+                          alt="Flèche"
+                          className="w-8 h-8"
+                          draggable={false}
+                        />
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>

@@ -3,9 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        'xs': '475px',
+        'tablet': '768px',
+        'laptop': '1024px',
+        'desktop': '1280px',
+      },
       backgroundImage: {
-        'mobile-ceniv': "url('/assets/image/bannière-overlay-cenivsite-mobile2.png')", // ton image mobile
-        'desktop-ceniv': "url('/assets/image/bannière-overlay-cenivsite4.jpg')", // ton image desktop
+        'mobile-ceniv': "url('/assets/image/bannière-overlay-cenivsite-mobile2.png')",
+        'tablet-ceniv': "url('/assets/image/bannière-overlay-cenivsite-mobile2.png')", // Même image pour tablette
+        'desktop-ceniv': "url('/assets/image/bannière-overlay-cenivsite4.jpg')",
       },
       colors: {
         ceniv: {

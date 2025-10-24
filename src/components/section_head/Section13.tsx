@@ -101,7 +101,16 @@ export default function Section13() {
       <style>{`
         .items-wrapper { margin-left: -32px; margin-right: -32px; }
         .item { padding-left: 32px; padding-right: 32px; }
-        @media (max-width: 992px) {
+        
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .image-wrap img { height: 280px !important; max-height: 280px !important; }
+          .item { margin-bottom: 24px !important; }
+          .title-wrapper { margin-bottom: 40px !important; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
           .image-wrap img { height: 220px !important; max-height: 220px !important; }
           .item { margin-bottom: 28px !important; }
           .title-wrapper { margin-bottom: 48px !important; }

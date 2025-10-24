@@ -89,7 +89,18 @@ export default function Section16() {
       <style>{`
         .items-wrapper { margin-left: -32px; margin-right: -32px; }
         .item { padding-left: 32px; padding-right: 32px; }
-        @media (max-width: 992px) {
+        
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .item-wrap { flex-direction: column !important; }
+          .item-img, .item-content { width: 100% !important; }
+          .item-img img { height: 160px !important; max-height: 160px !important; }
+          .item { margin-bottom: 24px !important; }
+          .title-wrapper { margin-bottom: 40px !important; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
           .item-wrap { flex-direction: column !important; }
           .item-img, .item-content { width: 100% !important; }
           .item-img img { height: 120px !important; max-height: 120px !important; }

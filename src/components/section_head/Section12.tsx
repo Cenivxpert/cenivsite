@@ -65,7 +65,16 @@ export default function Section12() {
       </div>
       {/* Responsive styles */}
       <style>{`
-        @media (max-width: 992px) {
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .grid { grid-template-columns: 1fr !important; }
+          .image-wrapper img { height: 450px !important; max-height: 450px !important; }
+          .nav-tabs { gap: 10px !important; }
+          .mbr-section-title { margin-bottom: 16px !important; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
           .grid { grid-template-columns: 1fr !important; }
           .image-wrapper img { height: 350px !important; max-height: 350px !important; }
           .nav-tabs { gap: 8px !important; }

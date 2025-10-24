@@ -45,7 +45,15 @@ export default function Section18() {
         .list-wrapper { margin-bottom: 36px; }
         .list { color: #FFFFFF; }
         .item-wrap:last-child { margin-bottom: 0; }
-        @media (max-width: 992px) {
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .mbr-section-title { margin-bottom: 40px !important; }
+          .google-map { margin-bottom: 40px !important; }
+          .social-wrapper { text-align: center !important; justify-content: center !important; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
           .mbr-section-title { margin-bottom: 48px !important; }
           .google-map { margin-bottom: 48px !important; }
           .social-wrapper { text-align: left !important; justify-content: flex-start !important; }

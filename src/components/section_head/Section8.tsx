@@ -172,8 +172,8 @@ export default function Section8() {
         .embla-section8 .item-img { width: 45%; }
         .embla-section8 .item-wrap img { height: 360px; }
 
-        /* Tablette (768px à 1024px) */
-        @media (min-width: 768px) and (max-width: 1024px) { 
+        /* Tablette uniquement (768px à 992px) */
+        @media (min-width: 768px) and (max-width: 992px) { 
           .embla-section8 { padding-left: 19%; padding-right: 0%; }
           .embla-section8 .item-content { 
             width: 40%; 

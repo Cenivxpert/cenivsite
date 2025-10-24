@@ -71,9 +71,17 @@ export default function Section11() {
           height: 480px; 
           object-fit: cover; 
         }
-        @media (max-width: 1200px) {
+        /* Desktop intermédiaire */
+        @media (max-width: 1200px) and (min-width: 993px) {
+          .grid-item img { height: 400px; width: 34vw; }
+        }
+        
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
           .grid-item img { height: 350px; width: 35vw; }
         }
+        
+        /* Mobile spécifique */
         @media (max-width: 767px) {
           .grid-item img { height: 200px; width: 40vw; }
         }

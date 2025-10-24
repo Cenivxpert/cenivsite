@@ -21,7 +21,7 @@ const cards = [
   },
 ];
 
-export default function Section8() {
+export default function Section9() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
 
@@ -57,7 +57,7 @@ export default function Section8() {
               transition={{ duration: 0.7, delay: 0.15 * idx }}
             >
               <div
-                className="item-wrapper transition-all duration-300 border-2 border-transparent rounded-xl shadow-lg h-full hover:border-[#D4A373] hover:bg-[#D4A373] hover:-rotate-y-6 focus:border-[#D4A373] focus:bg-[#D4A373]"
+                className="item-wrapper transition-all duration-300 border-2 border-transparent rounded-xl shadow-lg h-full hover:border-[#D4A373] hover:bg-[#D4A373] hover:scale-[1.02] focus:border-[#D4A373] focus:bg-[#D4A373]"
                 tabIndex={0}
               >
                 <div className="item-wrap border border-[#586102] bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] rounded-xl flex flex-col justify-between h-full overflow-hidden transition-all duration-300">
@@ -97,7 +97,14 @@ export default function Section8() {
       </div>
       {/* Responsive styles */}
       <style>{`
-        @media (max-width: 992px) {
+        /* Tablette uniquement */
+        @media (min-width: 768px) and (max-width: 992px) {
+          .image-wrap img { height: 500px !important; max-height: 500px !important; }
+          .title-wrapper { margin-bottom: 40px !important; }
+        }
+        
+        /* Mobile spécifique */
+        @media (max-width: 767px) {
           .image-wrap img { height: 350px !important; max-height: 350px !important; }
           .title-wrapper { margin-bottom: 48px !important; }
         }
