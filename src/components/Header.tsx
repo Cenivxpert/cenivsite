@@ -24,30 +24,49 @@ import Section15 from "./section_head/Section15";
 import Section16 from "./section_head/Section16";
 import Section17 from "./section_head/Section17";
 import Section18 from "./section_head/Section18";
+import { useTikTokData } from "../hooks/useTikTokData";
 
-// Slides du carousel
-const slides = [
+// Type pour les slides
+interface CarouselSlide {
+  img: string;
+  title: string;
+  text: string;
+  link: string;
+  isTikTok?: boolean;
+}
+
+// Slides statiques (TV et Design)
+const staticSlides: CarouselSlide[] = [
   {
-    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1636304508054-daf943221-h_mg011u9d.jpg",
+    img: "/press/photos-video-hd/Studio-Ceniv-1.jpg",
     title: "TV",
     text: "Vidéos qui captivent, histoires qui résonnent.",
     link: "#tv"
   },
   {
-    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1543349689-b481d0472a54.jpeg",
+    img: "/press/photos-video-hd/Ceniv-design.jpeg",
     title: "Design",
     text: "Esthétique audacieuse pour vos projets.",
     link: "#design"
-  },
-  {
-    img: "https://r.mobirisesite.com/1844272/assets/images/photo-1706452031249-1520c2a78-h_mfpvqes9.jpg",
-    title: "News",
-    text: "L'information qui compte, livrée sans fard.",
-    link: "#news"
-  },
+  }
 ];
 
 export default function Header() {
+  // Hook TikTok pour récupérer la dernière vidéo
+  const { videoData, loading } = useTikTokData();
+  
+  // Créer les slides dynamiquement en combinant statique + TikTok
+  const slides: CarouselSlide[] = [
+    ...staticSlides,
+    {
+      img: loading ? "/press/photos-video-hd/Ceniv-&-Centrafric-Community.jpg" : videoData.thumbnail,
+      title: videoData.title,
+      text: videoData.description,
+      link: videoData.url,
+      isTikTok: true
+    }
+  ];
+  
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
       loop: true,
@@ -178,8 +197,23 @@ export default function Header() {
                     />
                     {/* Texte à droite */}
                     <div className="flex-1">
-                      <h4 className="font-serif text-white text-base font-semibold mb-1">{slide.title}</h4>
+                      <div className="flex items-center gap-2 mb-1">
+                        <h4 className="font-serif text-white text-base font-semibold">{slide.title}</h4>
+                        {slide.isTikTok && (
+                          <div className="flex items-center gap-1">
+                            <span className="text-xs bg-gradient-to-r from-[#ff0050] to-[#00f2ea] text-white px-2 py-0.5 rounded-full font-bold">
+                              LIVE
+                            </span>
+                            <img src="/assets/ico/icone_réseaux/ico/tiktok_logo.ico" alt="TikTok" className="w-4 h-4" />
+                          </div>
+                        )}
+                      </div>
                       <p className="font-serif text-white text-base">{slide.text}</p>
+                      {slide.isTikTok && !loading && (
+                        <p className="text-xs text-gray-400 mt-1">
+                          Dernière vidéo • {videoData.views || ''} vues
+                        </p>
+                      )}
                     </div>
                     {/* Flèche avec transition douce - toujours présente pour éviter les rerenders */}
                     <div className={`flex flex-col justify-end items-end h-full ml-6 transition-opacity duration-300 ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}>
