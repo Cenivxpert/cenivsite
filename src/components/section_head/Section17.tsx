@@ -133,27 +133,37 @@ export default function Section17() {
                 >
                   <div className="dragArea row flex flex-col gap-4">
                     <div className="form-group mb-3 w-full">
+                      <label htmlFor="section17-name" className="sr-only">
+                        Nom complet
+                      </label>
                       <input
                         type="text"
+                        id="section17-name"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Nom"
                         className="form-control w-full px-4 py-3 rounded-lg border border-white bg-transparent text-white text-lg placeholder:text-white/70 focus:border-[#D4A373] transition"
-                        autoComplete="off"
+                        autoComplete="name"
                         required
+                        aria-label="Nom complet"
                       />
                     </div>
                     <div className="form-group mb-3 w-full">
+                      <label htmlFor="section17-email" className="sr-only">
+                        Adresse email
+                      </label>
                       <input
                         type="email"
+                        id="section17-email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="Email"
                         className="form-control w-full px-4 py-3 rounded-lg border border-white bg-transparent text-white text-lg placeholder:text-white/70 focus:border-[#D4A373] transition"
-                        autoComplete="off"
+                        autoComplete="email"
                         required
+                        aria-label="Adresse email"
                       />
                     </div>
                     

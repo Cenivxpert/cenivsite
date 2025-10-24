@@ -119,14 +119,16 @@ export default function PhotosGallery() {
           <div className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8 text-[#D4A373]">À la Une</h2>
             <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl p-4 border border-white/10">
-              <Carousel
-                showThumbs={false}
-                infiniteLoop
-                autoPlay
-                interval={4000}
-                showStatus={false}
-                className="featured-carousel"
-              >
+              <div role="region" aria-label="Galerie d'images à la une">
+                <Carousel
+                  showThumbs={false}
+                  infiniteLoop
+                  autoPlay
+                  interval={4000}
+                  showStatus={false}
+                  showIndicators={true}
+                  className="featured-carousel"
+                >
                 {imagesOnly.slice(0, 5).map((item, index) => (
                   <motion.div
                     key={index}
@@ -153,7 +155,8 @@ export default function PhotosGallery() {
                     </div>
                   </motion.div>
                 ))}
-              </Carousel>
+                </Carousel>
+              </div>
             </div>
           </div>
 
@@ -317,6 +320,12 @@ export default function PhotosGallery() {
             border-radius: 50%;
             margin: 0 8px;
             transition: all 0.3s ease;
+            cursor: pointer;
+          }
+          
+          .featured-carousel .carousel .control-dots .dot:focus {
+            outline: 2px solid #D4A373;
+            outline-offset: 2px;
           }
           
           .featured-carousel .carousel .control-dots .dot.selected {

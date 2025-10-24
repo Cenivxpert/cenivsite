@@ -19,7 +19,9 @@ export const filterDevWarnings = () => {
       message.includes('removeChild') ||
       message.includes('Embla selection error') ||
       message.includes('Embla cleanup error') ||
-      message.includes('Using UNSAFE_componentWillMount in strict mode')
+      message.includes('Using UNSAFE_componentWillMount in strict mode') ||
+      message.includes('form field element has neither an id nor a name') ||
+      message.includes('label\'s for attribute doesn\'t match')
     ) {
       return; // Ignorer ces warnings spécifiques
     }
