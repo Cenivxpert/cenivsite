@@ -94,7 +94,7 @@ export default function Section14() {
                 style={{ minHeight: '500px' }}
                 tabIndex={0}
               >
-                <div className="item-wrap border border-[#586102] bg-[#1D2200] flex flex-col overflow-hidden h-full rounded-3xl">
+                <div className="item-wrap border border-[#586102] bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] flex flex-col overflow-hidden h-full rounded-3xl">
                   {/* Main Icon */}
                   <div className="icon-wrapper-main flex items-center justify-center bg-[#586102] h-[280px] rounded-t-3xl">
                     <a href={card.link} className="flex items-center justify-center">

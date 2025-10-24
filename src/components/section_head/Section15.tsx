@@ -60,7 +60,7 @@ export default function Section15() {
             >
               {faq.map((item, idx) => (
                 <div
-                  className={`card bg-[#1D2200] border border-[#586102] rounded-3xl mt-3 transition-all duration-300 ${open === idx ? "border-[#D4A373]" : ""}`}
+                  className={`card bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] border border-[#586102] rounded-3xl mt-3 transition-all duration-300 ${open === idx ? "border-[#D4A373]" : ""}`}
                   key={idx}
                   tabIndex={0}
                   onFocus={() => setOpen(idx)}

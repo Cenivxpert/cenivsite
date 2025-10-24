@@ -35,7 +35,7 @@ export default function Section10() {
               transition={{ duration: 0.7, delay: 0.1 * idx }}
             >
               <div
-                className="item-wrapper flex flex-col justify-between h-full transition-all duration-300 border border-[#586102] bg-[#1D2200] rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-2xl"
+                className="item-wrapper flex flex-col justify-between h-full transition-all duration-300 border border-[#586102] bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-2xl"
                 tabIndex={0}
               >
                 <div className="item-content px-6 py-6 md:py-8 mb-0">

@@ -114,7 +114,7 @@ export default function Section4() {
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
-              className="bg-[#1D2200] border border-[#586102] rounded-xl shadow-lg flex flex-col items-center justify-between px-8 py-10 md:w-1/3 w-full h-full transition-all duration-300"
+              className="item-wrap border border-[#586102] bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] rounded-xl flex flex-col justify-between h-full overflow-hidden transition-all duration-300 px-8 py-10 md:w-1/3 w-full shadow-lg items-center"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 * idx }}

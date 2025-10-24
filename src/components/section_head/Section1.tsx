@@ -45,7 +45,7 @@ export default function Section1() {
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
-              className="bg-[#1D2200] border-2 border-[#586102] rounded-lg shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:border-[#D4A373] hover:bg-[#D4A373]/20 w-full md:w-1/3"
+              className="item-wrap border border-[#586102] bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] rounded-xl flex flex-col justify-between h-full overflow-hidden transition-all duration-300 hover:border-[#D4A373] hover:bg-gradient-to-br hover:from-[#D4A373]/10 hover:via-[#D4A373]/5 hover:to-[#D4A373]/10 w-full md:w-1/3 shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 * idx }}

@@ -53,7 +53,7 @@ export default function Section16() {
                 className="item-wrapper h-full border-2 border-transparent transition-all duration-300 rounded-2xl hover:border-[#D4A373] hover:bg-[#D4A373] focus:border-[#D4A373] focus:bg-[#D4A373]"
                 tabIndex={0}
               >
-                <div className="item-wrap p-2 md:p-4 border border-[#586102] bg-[#1D2200] flex h-full justify-between rounded-2xl flex-col md:flex-row">
+                <div className="item-wrap p-2 md:p-4 border border-[#586102] bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] flex h-full justify-between rounded-2xl flex-col md:flex-row">
                   {/* Image */}
                   <div className="item-img w-full md:w-1/2 flex-shrink-0">
                     <img
