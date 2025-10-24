@@ -229,7 +229,7 @@ export default function Section7() {
           <div className="mbr-section-btn text-center mt-10">
             <a
               className="btn btn-primary bg-[#D4A373] text-[#1D2200] px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition mt-24 inline-block"
-              href="#"
+              href="/branch"
             >
               En Savoir Plus
             </a>

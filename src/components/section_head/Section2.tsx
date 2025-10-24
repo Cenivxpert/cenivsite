@@ -70,7 +70,7 @@ export default function Section2() {
         <div className="mbr-section-btn text-center mt-12 mb-16">
           <a
             className="btn btn-primary bg-[#D4A373] text-[#1D2200] px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition"
-            href="#"
+            href="/about"
           >
             Notre Histoire
           </a>

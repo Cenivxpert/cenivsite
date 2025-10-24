@@ -6,19 +6,19 @@ const cards = [
   {
     title: "Mentions Légales",
     img: "https://r.mobirisesite.com/1844272/assets/images/photo-1546542755-81ef2fa60800.jpeg",
-    link: "#",
+    link: "/mentions-legales",
     btn: "Lire Ici",
   },
   {
     title: "Contact Pro",
     img: "https://r.mobirisesite.com/1844272/assets/images/photo-1604092039917-7c153e632619.jpeg",
-    link: "#",
+    link: "/contact-pro",
     btn: "Lire Ici",
   },
   {
     title: "Politique Éditoriale",
     img: "https://r.mobirisesite.com/1844272/assets/images/photo-1694095748042-a659a51a1d52.jpeg",
-    link: "#",
+    link: "/politique-editoriale",
     btn: "Lire Ici",
   },
 ];

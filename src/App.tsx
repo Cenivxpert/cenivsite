@@ -8,6 +8,9 @@ import Branch from './pages/Branch'
 import PhotosGallery from './pages/PhotosGallery'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
+import MentionsLegales from './pages/MentionsLegales'
+import ContactPro from './pages/ContactPro'
+import PolitiqueEditoriale from './pages/PolitiqueEditoriale'
 
 import MainLayout from './layouts/MainLayout'
 
@@ -43,6 +46,9 @@ export default function App() {
         <Route path="/photos-gallery" element={<PhotosGallery />} />
         <Route path="/branch" element={<Branch />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/contact-pro" element={<ContactPro />} />
+        <Route path="/politique-editoriale" element={<PolitiqueEditoriale />} />
 
         {/* Pages avec Header/Footer via MainLayout */}
         <Route path="/" element={<MainLayout />}>

@@ -55,7 +55,7 @@ export default function Section3() {
             <div className="mbr-section-btn mt-2">
               <a
                 className="btn btn-primary bg-[#D4A373] text-[#1D2200] px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-[#ba4b0bce] transition"
-                href="#"
+                href="/contact"
               >
                 Contactez-nous
               </a>

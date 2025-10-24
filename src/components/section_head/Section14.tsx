@@ -19,22 +19,22 @@ const cards: Card[] = [
   {
     mainIcon: <FaCheckCircle />,
     mainIconColor: "#FFFFFF",
-    desc: "Presse",
+    desc: "Dernières Nouvelles",
     title: "Communiqués",
     text: "Les dernières nouvelles.",
     icon: <FaArrowRight />,
     iconColor: "#FFFFFF",
-    link: "#"
+    link: "/communiques"
   },
   {
     mainIcon: <FaCheckCircle />,
     mainIconColor: "#FFFFFF",
     desc: "Kit",
-    title: "Press Kit",
+    title: "Dossier de Presse",
     text: "Nos outils.",
     icon: <FaArrowRight />,
     iconColor: "#FFFFFF",
-    link: "#"
+    link: "/press"
   },
   {
     mainIcon: <FaCheckCircle />,
@@ -44,7 +44,7 @@ const cards: Card[] = [
     text: "Nos visages.",
     icon: <FaArrowRight />,
     iconColor: "#FFFFFF",
-    link: "#"
+    link: "/about"
   }
 ];
 
