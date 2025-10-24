@@ -1,5 +1,6 @@
 import './index.css'
 import { Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home'
 import About from './pages/About'
 import PressKit from './pages/PressKit'
@@ -33,8 +34,9 @@ import SocialLinksLarge from './components/SocialLinksLarge'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] text-gray-100">
-      <Routes>
+    <HelmetProvider>
+      <div className="min-h-screen bg-gradient-to-br from-[#001822] via-[#002a3a] to-[#001822] text-gray-100">
+        <Routes>
         {/* Pages indépendantes (sans Header/Footer) */}
         <Route path="/about" element={<About />} />
         <Route path="/press" element={<PressKit />} />
@@ -70,7 +72,8 @@ export default function App() {
           {/* 404 dans le scope du layout */}
           <Route path="*" element={<NotFound />} />
         </Route>
-      </Routes>
-    </div>
+        </Routes>
+      </div>
+    </HelmetProvider>
   )
 }

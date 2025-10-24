@@ -18,7 +18,8 @@ export const filterDevWarnings = () => {
       message.includes('SideEffect(NullComponent') ||
       message.includes('removeChild') ||
       message.includes('Embla selection error') ||
-      message.includes('Embla cleanup error')
+      message.includes('Embla cleanup error') ||
+      message.includes('Using UNSAFE_componentWillMount in strict mode')
     ) {
       return; // Ignorer ces warnings spécifiques
     }
@@ -33,9 +34,11 @@ export const filterDevWarnings = () => {
     // Filtrer les erreurs DOM non-critiques
     if (
       message.includes('NotFoundError: Failed to execute \'removeChild\'') ||
-      message.includes('The node to be removed is not a child')
+      message.includes('The node to be removed is not a child') ||
+      message.includes('Using UNSAFE_componentWillMount in strict mode') ||
+      message.includes('SideEffect(NullComponent')
     ) {
-      console.warn('DOM Warning (filtered):', message);
+      console.warn('DOM/React Warning (filtered):', message);
       return;
     }
     
