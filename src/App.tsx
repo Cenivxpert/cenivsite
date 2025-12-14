@@ -1,3 +1,4 @@
+// @ts-expect-error: allow importing CSS without type declarations
 import './index.css'
 import { Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
