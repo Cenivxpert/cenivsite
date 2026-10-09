@@ -40,12 +40,8 @@ export default function Footer() {
             Contact
           </a>
           <span className="mx-1">/</span>
-          <a href="/legal" className="hover:text-[#D4A373] transition">
+          <a href="/mentions-legales" className="hover:text-[#D4A373] transition">
             Mentions Légales
-          </a>
-          <span className="mx-1">/</span>
-          <a href="/terms" className="hover:text-[#D4A373] transition">
-            Conditions Générales
           </a>
         </nav>
         {/* Bouton scroll-to-top à droite */}
