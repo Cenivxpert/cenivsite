@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home'
 import About from './pages/About'
 import PressKit from './pages/PressKit'
+import PressCenivEdition, { pressArticle } from './pages/PressCenivEdition'
 import Branch from './pages/Branch'
 import PhotosGallery from './pages/PhotosGallery'
 import Contact from './pages/Contact'
@@ -44,6 +45,7 @@ export default function App() {
         {/* Pages indépendantes (sans Header/Footer) */}
         <Route path="/about" element={<About />} />
         <Route path="/press" element={<PressKit />} />
+        <Route path={pressArticle.path} element={<PressCenivEdition />} />
         <Route path="/photos-gallery" element={<PhotosGallery />} />
         <Route path="/branch" element={<Branch />} />
         <Route path="/contact" element={<Contact />} />
