@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
+import { pressArticle } from './PressCenivEdition';
 
 // Data structure pour organiser les ressources
 const pressResources = [
@@ -103,7 +105,7 @@ const contactInfo = {
   email: "cenivxpert.mk96@outlook.com",
   phone: "+212 601 058 129",
   address: "Marrakech, Maroc",
-  website: "https://ceniv.vercel.app/",
+  website: "https://cenivxpert.com/",
   socials: [
     { name: "Twitter", url: "https://twitter.com/ceniv", icon: "🐦" },
     { name: "LinkedIn", url: "https://www.linkedin.com/company/ceniv-design-digital-communication", icon: "💼" },
@@ -146,6 +148,16 @@ export default function PressKit() {
               <span className="text-[#D4A373]">Fondé le 10 mars 2025 à Marrakech</span>
             </p>
           </div>
+
+          <section aria-labelledby="press-news" className="mx-auto mb-16 max-w-4xl">
+            <h2 id="press-news" className="mb-6 text-3xl font-bold text-[#D4A373]">Actualités de CENIV</h2>
+            <article className="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-xl font-semibold">
+                <Link to={pressArticle.path} className="text-[#D4A373] underline underline-offset-4">{pressArticle.title}</Link>
+              </h3>
+              <p className="text-gray-300">{pressArticle.description}</p>
+            </article>
+          </section>
 
           {/* Resources Grid */}
           <div className="max-w-7xl mx-auto mb-16">
